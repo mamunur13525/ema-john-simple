@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 
 const Product = (props) => {
 
-    const {name, seller, price, stock, img, key} = props.product;
+
+    const {name, seller, price, stock, img, key, value} = props.product;
   
-    // console.log(data);
+  
     return (
         <div className="product">
             <div className="product-img">
@@ -18,6 +19,7 @@ const Product = (props) => {
                 <h2><Link to={"/product/"+key}>{name}</Link></h2>
                 <p>by: {seller}</p>
                 <h3>${price}</h3>
+                <p><small>Product quantity: {value}</small></p>
                 <p>only {stock} left in stock - order soon</p>
             {
                props.addToCart &&

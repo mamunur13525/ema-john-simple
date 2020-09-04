@@ -8,7 +8,7 @@ const ReviewItem = (props) => {
     return (
         <>
          <Product key={key} product={props.product}></Product>
-         <button className="button">Remove</button>
+         <button onClick={()=> props.handleRemoveItem(key)} className="main-button">Remove</button>
        </>
     );
 };
